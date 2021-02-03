@@ -1,18 +1,540 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8EB"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            android:padding="16dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                tools:context=".MainActivity"
+                >
+                <ImageView
+                    android:id="@+id/truck_logo_imageview"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_truck_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="16dp"
+                    />
+                <TextView
+                    android:id="@+id/truck_reg_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TN30NYA983"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/truck_sim_tracking_quotes"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/truck_logo_imageview"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/truck_veh_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="25dp"
+                    android:text="EICHER MOTOR"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_reg_number"
+                    app:layout_constraintStart_toEndOf="@+id/truck_logo_imageview"
+                    android:layout_marginStart="8dp"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:background="@drawable/shape_rounded_rect_blue"
+                    />
+
+                <TextView
+                    android:id="@+id/truck_sim_tracking_quotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIM TRACKING"
+                    android:layout_margin="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                <TextView
+                    android:id="@+id/truck_sim_tracking_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp"
+                    android:gravity="center"
+                    android:text="START"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_sim_tracking_quotes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#00A60C"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_right_24"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:background="@drawable/shape_rect_rounded_outline_green"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/truck_title_rule"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_sim_tracking_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#CFCFCF"
+                    android:layout_marginTop="8dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/truck_assign_driver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="45dp"
+                    android:gravity="center"
+                    android:text="Assign Driver"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_title_rule"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="#000000"
+                    android:drawableEnd="@drawable/ic_person_pin_24px"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/shape_rect_rounded_outline_gray_fill"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/truck_assign_driver_rule"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_assign_driver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#CFCFCF"
+                    android:layout_marginTop="16dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/truck_choose_tracking_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:text="CHOOSE TRACKING TYPE"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_assign_driver_rule" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+                <RelativeLayout
+                    android:id="@+id/truck_by_gps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_choose_tracking_type"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/shape_rect_rounded_outline_black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="35dp"
+                        android:gravity="center"
+                        android:text="GPS"
+                        android:drawablePadding="10dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="#000000"
+                        android:drawableStart="@drawable/ic_gps_fixed_24px"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/truck_by_sim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_choose_tracking_type"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/shape_rect_outline_blue_fill">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="35dp"
+                    android:gravity="center"
+                    android:text="SIM"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="#FFF"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_sim_card"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_rect_rounded_fill_gray"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_by_sim"
+                    >
+                    <TextView
+                        android:id="@+id/truck_duration_quotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Durations"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginTop="8dp"
+                        android:textSize="12sp"
+                        android:layout_marginStart="8dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="100dp"
+                        android:layout_below="@+id/truck_duration_quotes"
+                        android:pointerIcon="crosshair"
+                        android:spinnerMode="dropdown"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/custom_spinner"
+                        android:entries="@array/duration"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/truck_contect_number"
+                        android:background="@drawable/shape_circle_gray"
+                        android:src="@drawable/ic_mobile_alt" />
+
+                    <TextView
+                        android:id="@+id/truck_contect_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="+91 7766223331"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/oppins_semi_bold"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/truck_initiate_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="30dp"
+                        android:gravity="center"
+                        android:text="Initiate"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="#FF0000"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/truck_contect_number"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:fontFamily="@font/poppins_regular"
+                        android:background="@drawable/shape_rect_rounded_outline_red"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                tools:context=".MainActivity"
+                >
+
+                <TextView
+                    android:id="@+id/truck_plan_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:text="Plan Name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/truck_pickup_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="35dp"
+                    android:gravity="center"
+                    android:text="Pickup Location"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#007AA9"
+                    android:layout_alignParentEnd="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:drawableStart="@drawable/ic_near_me_24px"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/shape_rect_rounded_outline_blue"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/truck_plan_name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_plan_name">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/truck_plan_name_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Plan Name"
+                        android:background="@drawable/shape_rect_rounded_outline_gray"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/truck_plan_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:text="Select Plan Type"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_plan_name_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/truck_plan_type_scrolls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="none"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_plan_type"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="100dp"
+                            android:minHeight="40dp"
+                            android:background="@drawable/shape_rect_outline_rounded_blue_fill"
+                            android:text="Loading"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:fontFamily="@font/oppins_semi_bold"
+                            android:layout_marginEnd="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="100dp"
+                            android:minHeight="40dp"
+                            android:background="@drawable/shape_rect_rounded_outline_blue"
+                            android:text="Adhoc"
+                            android:gravity="center"
+                            android:fontFamily="@font/oppins_semi_bold"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="100dp"
+                            android:minHeight="40dp"
+                            android:background="@drawable/shape_rect_rounded_outline_blue"
+                            android:text="Service"
+                            android:gravity="center"
+                            android:fontFamily="@font/oppins_semi_bold"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="100dp"
+                            android:minHeight="40dp"
+                            android:background="@drawable/shape_rect_rounded_outline_blue"
+                            android:text="Shed"
+                            android:gravity="center"
+                            android:fontFamily="@font/oppins_semi_bold"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/truck_pickup_location_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oppins_semi_bold"
+                    android:text="Select Plan Type"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_plan_type_scrolls"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/truck_pickup_loc_imgvw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_person_pin_circle_24px"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_tv"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/truck_pickup_loc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/truck_pickup_loc_imgvw"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_tv"
+                    android:text="CAMP Road Chennai"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/poppins_regular"
+                    android:background="@drawable/shape_rect_outline_rounded_light_blue_fill"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="30dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="8:00"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/ic_baseline_access_time_24"
+                    />
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

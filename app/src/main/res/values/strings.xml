@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TruckTracking</string>
+
+    <string-array name="duration">
+        <item>10 Mins</item>
+        <item>20 Mins</item>
+        <item>30 Mins</item>
+        <item>40 Mins</item>
+        <item>50 Mins</item>
+    </string-array>
 </resources>
