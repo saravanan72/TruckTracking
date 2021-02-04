@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">TruckTracking</string>
+    <string name="create_plan">Create Plan</string>
+    <string name="vehicle_number">TN30NYA983</string>
+    <string name="vehicle_name">EICHER MOTOR</string>
+    <string name="sim_tracking">SIM TRACKING</string>
+    <string name="start">START</string>
 
     <string-array name="duration">
         <item>10 Mins</item>

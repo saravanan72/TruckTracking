@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8EB"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/advanced_loading_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="@dimen/dp_3"
+        android:background="@color/white"
+        app:titleTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.AppBarOverlay"
+        app:title="@string/create_plan" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/advanced_loading_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:elevation="3dp"
-            android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:popupTheme="@style/AppTheme.AppBarOverlay"
-            app:title="Create Plan" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,40 +36,41 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="parent"
             app:cardBackgroundColor="@color/white"
-            android:layout_margin="8dp"
-            android:padding="16dp"
+            android:layout_margin="@dimen/dp_8"
+            android:padding="@dimen/dp_16"
             app:cardCornerRadius="5dp"
-            app:cardElevation="5dp"
+            app:cardElevation="@dimen/dp_5"
             >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="8dp"
-                android:layout_marginBottom="10dp"
+                android:padding="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_10"
                 tools:context=".MainActivity"
                 >
                 <ImageView
                     android:id="@+id/truck_logo_imageview"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_8"
                     android:src="@drawable/ic_truck_circle"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/dp_16"
                     />
                 <TextView
                     android:id="@+id/truck_reg_number"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="wrap_content"
-                    android:text="TN30NYA983"
-                    android:layout_margin="5dp"
-                    android:textSize="16sp"
+                    android:text="@string/vehicle_number"
+                    android:layout_margin="@dimen/dp_5"
+                    android:textSize="@dimen/dp_16"
+                    android:textColor="@color/black"
                     android:gravity="center_vertical"
                     app:layout_constraintEnd_toStartOf="@+id/truck_sim_tracking_quotes"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/truck_logo_imageview"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/dp_8"
                     android:fontFamily="@font/oppins_semi_bold"
                     />
 
@@ -73,15 +79,15 @@
                     android:id="@+id/truck_veh_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="25dp"
-                    android:text="EICHER MOTOR"
+                    android:minHeight="@dimen/dp_25"
+                    android:text="@string/vehicle_name"
                     app:layout_constraintTop_toBottomOf="@+id/truck_reg_number"
                     app:layout_constraintStart_toEndOf="@+id/truck_logo_imageview"
-                    android:layout_marginStart="8dp"
-                    android:textSize="10sp"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:textSize="@dimen/dp_10"
                     android:gravity="center"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
                     android:textColor="@color/white"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:background="@drawable/shape_rounded_rect_blue"
@@ -91,11 +97,12 @@
                     android:id="@+id/truck_sim_tracking_quotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SIM TRACKING"
-                    android:layout_margin="5dp"
+                    android:text="@string/sim_tracking"
+                    android:textColor="@color/black"
+                    android:layout_margin="@dimen/dp_5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/dp_8"
                     android:fontFamily="@font/poppins_regular"
                     />
 
@@ -103,14 +110,14 @@
                     android:id="@+id/truck_sim_tracking_start"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="30dp"
+                    android:minHeight="@dimen/dp_30"
                     android:gravity="center"
-                    android:text="START"
+                    android:text="@string/start"
                     app:layout_constraintTop_toBottomOf="@+id/truck_sim_tracking_quotes"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="8dp"
-                    android:paddingStart="16dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:paddingStart="@dimen/dp_16"
                     android:paddingEnd="8dp"
                     android:textColor="#00A60C"
                     android:drawableEnd="@drawable/ic_baseline_arrow_right_24"
@@ -137,6 +144,7 @@
                     android:minHeight="45dp"
                     android:gravity="center"
                     android:text="Assign Driver"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toBottomOf="@+id/truck_title_rule"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +155,6 @@
                     android:paddingEnd="16dp"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:textColor="#000000"
                     android:drawableEnd="@drawable/ic_person_pin_24px"
                     android:fontFamily="@font/poppins_regular"
                     android:background="@drawable/shape_rect_rounded_outline_gray_fill"
@@ -174,6 +181,7 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:text="CHOOSE TRACKING TYPE"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/truck_assign_driver_rule" />
 
@@ -206,12 +214,12 @@
                         android:minHeight="35dp"
                         android:gravity="center"
                         android:text="GPS"
+                        android:textColor="@color/black"
                         android:drawablePadding="10dp"
                         android:paddingStart="16dp"
                         android:paddingEnd="8dp"
                         android:paddingTop="8dp"
                         android:paddingBottom="8dp"
-                        android:textColor="#000000"
                         android:drawableStart="@drawable/ic_gps_fixed_24px"
                         android:fontFamily="@font/poppins_regular"
                         />
@@ -270,10 +278,12 @@
                         android:fontFamily="@font/poppins_regular"
                         android:layout_marginTop="8dp"
                         android:textSize="12sp"
+                        android:textColor="@color/black"
                         android:layout_marginStart="8dp"
                         />
 
                     <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/truck_duration_spinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:minWidth="100dp"
@@ -300,6 +310,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:text="+91 7766223331"
+                        android:textColor="@color/black"
                         android:layout_marginEnd="8dp"
                         android:fontFamily="@font/oppins_semi_bold"
                         android:layout_marginTop="16dp"
@@ -366,6 +377,7 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:text="Plan Name"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -398,6 +410,9 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginTop="20dp"
                     android:paddingStart="8dp"
+                    android:backgroundTint="@color/gray"
+                    app:hintTextColor="@color/black"
+                    android:textColorHint="@color/gray"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/truck_plan_name">
@@ -406,7 +421,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter Plan Name"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/poppins_medium"
+                        android:textColorHint="@color/gray"
                         />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -419,6 +436,7 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:text="Select Plan Type"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toBottomOf="@+id/truck_plan_name_input"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -461,6 +479,7 @@
                             android:minHeight="40dp"
                             android:background="@drawable/shape_rect_rounded_outline_blue"
                             android:text="Adhoc"
+                            android:textColor="@color/black"
                             android:gravity="center"
                             android:fontFamily="@font/oppins_semi_bold"
                             android:layout_marginEnd="5dp"
@@ -474,6 +493,7 @@
                             android:minHeight="40dp"
                             android:background="@drawable/shape_rect_rounded_outline_blue"
                             android:text="Service"
+                            android:textColor="@color/black"
                             android:gravity="center"
                             android:fontFamily="@font/oppins_semi_bold"
                             android:layout_marginEnd="5dp"
@@ -487,6 +507,7 @@
                             android:minHeight="40dp"
                             android:background="@drawable/shape_rect_rounded_outline_blue"
                             android:text="Shed"
+                            android:textColor="@color/black"
                             android:gravity="center"
                             android:fontFamily="@font/oppins_semi_bold"
                             android:layout_marginEnd="5dp"
@@ -504,6 +525,7 @@
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:text="Select Plan Type"
+                    android:textColor="@color/black"
                     app:layout_constraintTop_toBottomOf="@+id/truck_plan_type_scrolls"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -546,6 +568,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_tv"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:text="8:00"
+                    android:textColor="@color/black"
                     android:gravity="center"
                     android:drawablePadding="5dp"
                     android:layout_marginEnd="8dp"
@@ -571,6 +594,7 @@
                     android:minHeight="30dp"
                     android:id="@+id/truck_driver_name_txtvw"
                     android:text="Ramesh Ram"
+                    android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:layout_marginTop="16dp"
                     android:layout_marginStart="8dp"
@@ -588,6 +612,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/truck_pickup_time_txtvw"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:text="+91 7401098922"
+                    android:textColor="@color/black"
                     android:gravity="center_vertical"
                     android:fontFamily="@font/poppins_regular"
                     android:layout_marginEnd="8dp"
@@ -684,6 +709,9 @@
                             android:layout_marginTop="20dp"
                             android:paddingStart="8dp"
                             android:layout_marginEnd="8dp"
+                            android:backgroundTint="@color/gray"
+                            app:hintTextColor="@color/black"
+                            android:textColorHint="@color/gray"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             app:startIconDrawable="@drawable/ic_place_24px"
                             app:layout_constraintStart_toStartOf="parent"
@@ -695,6 +723,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Location"
                                 android:fontFamily="@font/poppins_medium"
+                                android:textColorHint="@color/gray"
                                 />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -706,6 +735,9 @@
                             android:layout_marginTop="20dp"
                             android:paddingStart="8dp"
                             android:paddingEnd="8dp"
+                            android:backgroundTint="@color/gray"
+                            app:hintTextColor="@color/black"
+                            android:textColorHint="@color/gray"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             app:startIconDrawable="@drawable/ic_date_range_24px"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -717,6 +749,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="Date &amp; Time"
                                 android:fontFamily="@font/poppins_medium"
+                                android:textColorHint="@color/gray"
                                 />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -818,6 +851,9 @@
                             android:layout_marginTop="20dp"
                             android:paddingStart="8dp"
                             android:layout_marginEnd="8dp"
+                            android:backgroundTint="@color/gray"
+                            app:hintTextColor="@color/black"
+                            android:textColorHint="@color/bg_gray"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             app:startIconDrawable="@drawable/ic_place_24px"
                             app:layout_constraintStart_toStartOf="parent"
@@ -829,6 +865,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Location"
                                 android:fontFamily="@font/poppins_medium"
+                                android:textColorHint="@color/bg_gray"
                                 />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -840,6 +877,9 @@
                             android:layout_marginTop="20dp"
                             android:paddingStart="8dp"
                             android:paddingEnd="8dp"
+                            android:backgroundTint="@color/gray"
+                            app:hintTextColor="@color/black"
+                            android:textColorHint="@color/gray"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             app:startIconDrawable="@drawable/ic_date_range_24px"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -851,6 +891,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="Date &amp; Time"
                                 android:fontFamily="@font/poppins_medium"
+                                android:textColorHint="@color/gray"
                                 />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -875,6 +916,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/guideline_bottom_view"
                     app:layout_constraintTop_toBottomOf="@+id/unloading_point_cardview"
                     android:text="CLOSE"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/oppins_semi_bold"
                     android:gravity="center"
                     android:layout_marginTop="16dp"
@@ -907,4 +949,6 @@
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
