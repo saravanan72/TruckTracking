@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    tools:context=".AdvancedLoadingPointActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/loading_point_close_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_circle_outline_black"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/advanced_loading_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            app:title="Advanced (Loading) " />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/loding_point_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:layout_marginBottom="?actionBarSize"
+            app:layout_constraintBottom_toTopOf="@+id/add_new_location_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advanced_loading_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/loding_point_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:overScrollMode="never"
+                    android:paddingTop="8dp"
+                    tools:listitem="@layout/layout_loading_item" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"/>
+                <LinearLayout
+                    android:id="@+id/add_new_location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_dashed_rounded_box"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="30dp"
+                        android:text="New Loading Point"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#007AA9"
+                        android:fontFamily="@font/oppins_semi_bold"
+                        />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/truck_pickup_location_inputbox"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingStart="8dp"
+                        app:startIconDrawable="@drawable/ic_place_24px">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/truck_pick_loc_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Enter Location"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/truck_pickup_datetime_inputbox"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingStart="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_inputbox"
+                        app:startIconDrawable="@drawable/ic_date_range_24px">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/truck_pickup_datetime_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="Date &amp; Time"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp"
+                            android:background="@drawable/shape_rect_rounded_outline_blue"
+                            android:text="Contact person"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="8dp"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                            android:drawablePadding="8dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="30dp"
+                            android:background="@drawable/shape_rect_rounded_outline_blue"
+                            android:text="Address"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="8dp"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                            android:drawablePadding="8dp"
+                            android:layout_marginStart="8dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:id="@+id/add_new_location_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rect_outline_blue_fill"
+            android:fontFamily="@font/oppins_semi_bold"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:text="Add New Location"
+            android:textColor="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

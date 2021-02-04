@@ -12,5 +12,9 @@ class MainActivity : AppCompatActivity() {
         (findViewById<TextView>(R.id.truck_pickup_location)).setOnClickListener({
             startActivity(Intent(MainActivity@this, AddPickupLocationActivity::class.java))
         })
+
+        (findViewById<TextView>(R.id.loading_point_advance_view)).setOnClickListener({
+            startActivity(Intent(MainActivity@this, AdvancedLoadingPointActivity::class.java))
+        })
     }
 }

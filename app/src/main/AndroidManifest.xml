@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TruckTracking">
         <activity
+            android:name=".AdvancedLoadingPointActivity"
+            android:theme="@style/MyDialogTheme"/>
+        <activity
             android:name=".AddPickupLocationActivity"
-            android:theme="@style/MyDialogTheme"
-            />
+            android:theme="@style/MyDialogTheme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
