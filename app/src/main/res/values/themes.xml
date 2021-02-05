@@ -33,4 +33,50 @@
     <style name="AppTheme.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.DarkActionBar" >
         <item name="android:fontFamily">@font/oppins_semi_bold</item>
     </style>
+    <style name="semibold_black_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="semibold_white_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="semibold_green_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <style name="semibold_red_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="semibold_blue_textview_theme">
+        <item name="fontFamily">@font/oppins_semi_bold</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="regular_black_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="regular_white_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="regular_green_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <style name="regular_red_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="regular_blue_textview_theme">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="input_layout_label_theme">
+        <item name="colorControlNormal">@color/semi_gray</item>
+        <item name="colorControlActivated">@color/dark_gray</item>
+        <item name="colorControlHighlight">@color/dark_gray</item>
+        <item name="hintTextColor">@color/gray</item>
+    </style>
 </resources>

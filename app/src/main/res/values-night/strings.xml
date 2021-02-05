@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sim">SIM</string>
+    <string name="driver_mobile_num">+91 7766223331</string>
+    <string name="initiate">Initiate</string>
+    <string name="plan_name">Plan Name</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="select_plan_type">Select Plan Type</string>
+    <string name="loading">Loading</string>
+    <string name="adhoc">Adhoc</string>
+    <string name="service">Service</string>
+    <string name="shed">Shed</string>
+    <string name="camp_road_chennai">CAMP Road Chennai</string>
+    <string name="time">8:00</string>
+    <string name="ramesh_ram">Ramesh Ram</string>
+    <string name="date_amp_time"><![CDATA[Date & Time]]></string>
+    <string name="advanced">Advanced</string>
+</resources>

@@ -5,6 +5,28 @@
     <string name="vehicle_name">EICHER MOTOR</string>
     <string name="sim_tracking">SIM TRACKING</string>
     <string name="start">START</string>
+    <string name="assign_driver">Assign Driver</string>
+    <string name="choose_tracking_type">CHOOSE TRACKING TYPE</string>
+    <string name="gps">GPS</string>
+    <string name="sim">SIM</string>
+    <string name="driver_mobile_num">+91 7766223331</string>
+    <string name="initiate">Initiate</string>
+    <string name="plan_name">Plan Name</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="select_plan_type">Select Plan Type</string>
+    <string name="loading">Loading</string>
+    <string name="adhoc">Adhoc</string>
+    <string name="service">Service</string>
+    <string name="shed">Shed</string>
+    <string name="camp_road_chennai">CAMP Road Chennai</string>
+    <string name="time">8:00</string>
+    <string name="ramesh_ram">Ramesh Ram</string>
+    <string name="user_mobile_number">+91 7401098922</string>
+    <string name="advanced">Advanced</string>
+    <string name="date_amp_time"><![CDATA[Date & Time]]></string>
+    <string name="enter_location">Enter Location</string>
+    <string name="close">CLOSE</string>
+    <string name="save">SAVE</string>
 
     <string-array name="duration">
         <item>10 Mins</item>
