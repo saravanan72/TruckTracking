@@ -15,4 +15,11 @@
     <string name="ramesh_ram">Ramesh Ram</string>
     <string name="date_amp_time"><![CDATA[Date & Time]]></string>
     <string name="advanced">Advanced</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="enter_plan_name">Enter Plan Name</string>
+    <string name="date_time_val">25-02-2021 18:35 PM</string>
+    <string name="bangalore_port">Bangalore Port</string>
+    <string name="loading_point_1">Loading Point 1</string>
+    <string name="address">Address</string>
+    <string name="add_new_location">Add New Location</string>
 </resources>

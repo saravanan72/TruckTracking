@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="@dimen/dp_150"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <View
         android:id="@+id/loading_item_top_dashview"
-        android:layout_width="5dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/dp_5"
+        android:layout_height="@dimen/dp_0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/loading_card_stepper_imgvw"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +19,8 @@
         android:id="@+id/loading_card_stepper_imgvw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="20dp"
-        android:minHeight="20dp"
+        android:minWidth="@dimen/dp_20"
+        android:minHeight="@dimen/dp_20"
         android:src="@drawable/ic_start_group"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/loading_item_cardview"
@@ -30,8 +30,8 @@
 
     <View
         android:id="@+id/loading_item_bottom_dashview"
-        android:layout_width="5dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/dp_5"
+        android:layout_height="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@+id/loading_card_stepper_imgvw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/loading_item_cardview"
@@ -53,52 +53,51 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loading_item_cardview"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/guideline_vartical_loading_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dp_16"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp">
+            android:paddingBottom="@dimen/dp_16">
             <TextView
                 android:id="@+id/loading_item_titlebar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="Loading Point 1"
-                android:textColor="@color/black"
-                android:minHeight="30dp"
+                android:text="@string/loading_point_1"
+                android:theme="@style/semibold_black_textview_theme"
+                android:minHeight="@dimen/dp_30"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp"
-                android:paddingStart="8dp"
-                android:fontFamily="@font/oppins_semi_bold"
+                android:layout_marginTop="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_8"
                 />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="30dp"
-                android:minHeight="30dp"
+                android:minWidth="@dimen/dp_30"
+                android:minHeight="@dimen/dp_30"
                 android:src="@drawable/ic_baseline_more_horiz_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"/>
             <View
                 android:id="@+id/laoding_item_topview"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_1"
                 app:layout_constraintTop_toBottomOf="@id/loading_item_titlebar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="#CFCFCF75"
-                android:layout_margin="8dp"/>
+                android:layout_margin="@dimen/dp_8"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_loading_card"
@@ -108,37 +107,36 @@
                 app:layout_constraintGuide_percent="0.5" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content"
                 android:id="@+id/loading_item_location_txtvw"
                 android:drawableStart="@drawable/ic_place_24px"
                 app:layout_constraintTop_toBottomOf="@+id/laoding_item_topview"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_loading_card"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:text="Bangalore Port"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:text="@string/bangalore_port"
                 android:textColor="@color/black"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/dp_8"
                 android:fontFamily="@font/poppins_medium"
                 />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content"
                 android:id="@+id/loading_item_datetime_txtvw"
                 android:drawableStart="@drawable/ic_date_range_24px"
                 app:layout_constraintTop_toBottomOf="@+id/laoding_item_topview"
                 app:layout_constraintStart_toEndOf="@+id/guideline_loading_card"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:text="25-02-2021 18:35 PM"
-                android:textColor="@color/black"
-                android:drawablePadding="8dp"
-                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:text="@string/date_time_val"
+                android:theme="@style/semibold_black_textview_theme"
+                android:drawablePadding="@dimen/dp_8"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

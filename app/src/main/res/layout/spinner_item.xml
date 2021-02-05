@@ -3,10 +3,9 @@
     android:id="@+id/spinner_text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="30dp"
+    android:minHeight="@dimen/dp_30"
     android:gravity="center_vertical"
-    android:paddingStart="5dp"
-    android:textColor="@color/black"
+    android:paddingStart="@dimen/dp_5"
+    android:theme="@style/semibold_black_textview_theme"
     android:backgroundTint="@color/white"
-    android:background="@color/white"
-    android:fontFamily="@font/oppins_semi_bold" />
+    android:background="@color/white"/>

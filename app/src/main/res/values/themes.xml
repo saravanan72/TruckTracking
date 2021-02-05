@@ -79,4 +79,7 @@
         <item name="colorControlHighlight">@color/dark_gray</item>
         <item name="hintTextColor">@color/gray</item>
     </style>
+    <style name="mySpinnerItemStyle" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/green</item>
+    </style>
 </resources>

@@ -27,6 +27,17 @@
     <string name="enter_location">Enter Location</string>
     <string name="close">CLOSE</string>
     <string name="save">SAVE</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="enter_plan_name">Enter Plan Name</string>
+    <string name="loading_point">Loading Point</string>
+    <string name="date_time_val">25-02-2021 18:35 PM</string>
+    <string name="bangalore_port">Bangalore Port</string>
+    <string name="loading_point_1">Loading Point 1</string>
+    <string name="locading_advanced">Advanced (Loading)</string>
+    <string name="new_loading_point">New Loading Point</string>
+    <string name="address">Address</string>
+    <string name="add_new_location">Add New Location</string>
+    <string name="contact_number">Contact Number</string>
 
     <string-array name="duration">
         <item>10 Mins</item>

@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.vamosys.trucktracking.adapter.AdvanceLoadingAdapter
 import com.vamosys.trucktracking.model.LoadingPoints
@@ -26,6 +28,14 @@ class AdvancedLoadingPointActivity : AppCompatActivity() {
         Log.d("TAG", "onCreate: "+list.size)
         adapter = AdvanceLoadingAdapter(list, this)
         findViewById<RecyclerView>(R.id.loding_point_recyclerview).adapter = adapter
+
+        val toolbar: Toolbar = findViewById<Toolbar>(R.id.advanced_loading_toolbar)
+        for (i in 0..toolbar.childCount){
+            val lview = toolbar.getChildAt(0)
+            if(lview is TextView){
+                lview.setTypeface(ResourcesCompat.getFont(this, R.font.oppins_semi_bold))
+            }
+        }
 
 
         var addNewLocBtn = findViewById<TextView>(R.id.add_new_location_btn)

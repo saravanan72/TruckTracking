@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/advanced_loading_toolbar"
+        android:id="@+id/create_plan_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:elevation="@dimen/dp_3"
@@ -282,6 +282,9 @@
                         android:layout_marginTop="@dimen/dp_5"
                         android:background="@drawable/custom_spinner"
                         android:entries="@array/duration"
+                        style="@style/mySpinnerItemStyle"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                         />
 
                     <ImageView
@@ -397,7 +400,10 @@
                     android:foregroundTint="@color/blue"
                     app:hintTextColor="@color/black"
                     android:textColorHint="@color/gray"
-                    android:theme="@style/input_layout_label_theme"
+                    app:boxStrokeColor="@color/gray"
+                    app:boxStrokeWidth="@dimen/dp_1"
+                    app:startIconTint="@color/gray"
+                    android:background="@android:color/transparent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/truck_plan_name">
@@ -405,8 +411,9 @@
                         android:id="@+id/truck_plan_name_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter Plan Name"
+                        android:hint="@string/enter_plan_name"
                         android:textColor="@color/black"
+                        android:textCursorDrawable="@color/gray"
                         android:fontFamily="@font/poppins_medium"
                         android:textColorHint="@color/gray"
                         android:backgroundTint="@color/gray"
@@ -633,7 +640,7 @@
                                 android:id="@+id/truck_loading_point_title_txtvw"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Loading Point"
+                                android:text="@string/loading_point"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/dp_8"
                                 android:theme="@style/semibold_white_textview_theme"/>
@@ -649,7 +656,7 @@
                                 android:gravity="center"
                                 android:layout_marginStart="@dimen/dp_8"
                                 android:layout_marginEnd="@dimen/dp_8"
-                                android:theme="@style/semibold_white_textview_theme"
+                                android:theme="@style/regular_white_textview_theme"
                                 android:layout_toEndOf="@+id/truck_loading_point_title_txtvw"
                                 />
                             <TextView
@@ -665,7 +672,7 @@
                                 android:text="@string/advanced"
                                 android:layout_marginEnd="@dimen/dp_8"
                                 android:layout_centerVertical="true"
-                                android:theme="@style/semibold_white_textview_theme"
+                                android:theme="@style/regular_white_textview_theme"
                                 />
                         </RelativeLayout>
 
@@ -694,12 +701,16 @@
                             app:startIconDrawable="@drawable/ic_place_24px"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/guideline_card"
-                            app:layout_constraintTop_toBottomOf="@+id/truck_loading_point_header">
+                            app:layout_constraintTop_toBottomOf="@+id/truck_loading_point_header"
+                            app:boxStrokeColor="@color/gray"
+                            app:boxStrokeWidth="@dimen/dp_1"
+                            app:startIconTint="@color/gray">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/truck_loading_point_loc_edittext"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Enter Location"
+                                android:hint="@string/enter_location"
+                                android:textCursorDrawable="@color/gray"
                                 android:fontFamily="@font/poppins_medium"
                                 android:textColorHint="@color/gray"
                                 />
@@ -721,12 +732,16 @@
                             app:startIconDrawable="@drawable/ic_date_range_24px"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/guideline_card"
-                            app:layout_constraintTop_toBottomOf="@+id/truck_loading_point_header">
+                            app:layout_constraintTop_toBottomOf="@+id/truck_loading_point_header"
+                            app:boxStrokeColor="@color/gray"
+                            app:boxStrokeWidth="@dimen/dp_1"
+                            app:startIconTint="@color/gray">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/truck_loading_point_datetime_edittext"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/date_amp_time"
+                                android:textCursorDrawable="@color/gray"
                                 android:fontFamily="@font/poppins_medium"
                                 android:textColorHint="@color/gray"
                                 />
@@ -834,12 +849,16 @@
                             app:startIconDrawable="@drawable/ic_place_24px"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/guideline_unload_card"
-                            app:layout_constraintTop_toBottomOf="@+id/truck_unloading_point_header">
+                            app:layout_constraintTop_toBottomOf="@+id/truck_unloading_point_header"
+                            app:boxStrokeColor="@color/gray"
+                            app:boxStrokeWidth="@dimen/dp_1"
+                            app:startIconTint="@color/gray">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/truck_unloading_point_loc_edittext"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/enter_location"
+                                android:textCursorDrawable="@color/gray"
                                 android:fontFamily="@font/poppins_medium"
                                 android:textColorHint="@color/gray"
                                 />
@@ -861,12 +880,16 @@
                             app:startIconDrawable="@drawable/ic_date_range_24px"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/guideline_unload_card"
-                            app:layout_constraintTop_toBottomOf="@+id/truck_unloading_point_header">
+                            app:layout_constraintTop_toBottomOf="@+id/truck_unloading_point_header"
+                            app:boxStrokeColor="@color/gray"
+                            app:boxStrokeWidth="@dimen/dp_1"
+                            app:startIconTint="@color/gray">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/truck_unloading_point_datetime_edittext"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/date_amp_time"
+                                android:textCursorDrawable="@color/gray"
                                 android:fontFamily="@font/poppins_medium"
                                 android:textColorHint="@color/gray"
                                 />
@@ -918,10 +941,6 @@
                     android:layout_marginEnd="@dimen/dp_8"
                     android:background="@drawable/shape_rect_outline_blue_fill"
                     />
-
-
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>

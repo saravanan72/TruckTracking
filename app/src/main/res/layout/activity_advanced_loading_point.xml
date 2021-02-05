@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/dp_8"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="3dp"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:cardElevation="@dimen/dp_3"
     tools:context=".AdvancedLoadingPointActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,8 +18,8 @@
             android:id="@+id/loading_point_close_imgvw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
             android:background="@drawable/shape_circle_outline_black"
             android:src="@drawable/ic_baseline_close_24"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,15 +27,15 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/advanced_loading_toolbar"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="?actionBarSize"
-            android:elevation="5dp"
+            android:elevation="@dimen/dp_5"
             app:titleTextColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/loading_point_close_imgvw"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/AppTheme.AppBarOverlay"
-            app:title="Advanced (Loading) " />
+            app:title="@string/locading_advanced" />
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/loding_point_scrollview"
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:overScrollMode="never"
-                    android:paddingTop="8dp"
+                    android:paddingTop="@dimen/dp_8"
                     tools:listitem="@layout/layout_loading_item" />
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -69,20 +69,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="8dp"
-                    android:padding="8dp"
+                    android:layout_margin="@dimen/dp_8"
+                    android:padding="@dimen/dp_8"
                     android:visibility="gone"
                     android:background="@drawable/shape_dashed_rounded_box"
                     >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:minHeight="30dp"
-                        android:text="New Loading Point"
+                        android:minHeight="@dimen/dp_30"
+                        android:text="@string/new_loading_point"
                         android:gravity="center_vertical"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:textColor="#007AA9"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:textColor="@color/blue"
                         android:fontFamily="@font/oppins_semi_bold"
                         />
                     <com.google.android.material.textfield.TextInputLayout
@@ -90,13 +90,16 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:paddingStart="8dp"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:paddingStart="@dimen/dp_8"
                         android:backgroundTint="@color/gray"
                         app:hintTextColor="@color/black"
+                        app:boxStrokeColor="@color/gray"
+                        app:boxStrokeWidth="@dimen/dp_1"
                         android:textColorHint="@color/gray"
                         android:theme="@style/input_layout_label_theme"
+                        app:startIconTint="@color/gray"
                         app:startIconDrawable="@drawable/ic_place_24px">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -104,9 +107,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:hint="Enter Location"
+                            android:hint="@string/enter_location"
                             android:imeOptions="actionNext"
                             android:inputType="text"
+                            android:textCursorDrawable="@color/gray"
                             android:textColorHint="@color/gray"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -116,26 +120,30 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:paddingStart="8dp"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:paddingStart="@dimen/dp_8"
                         android:theme="@style/input_layout_label_theme"
                         android:backgroundTint="@color/gray"
                         app:hintTextColor="@color/black"
+                        app:boxStrokeColor="@color/gray"
+                        app:boxStrokeWidth="@dimen/dp_1"
                         android:textColorHint="@color/gray"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/truck_pickup_location_inputbox"
-                        app:startIconDrawable="@drawable/ic_date_range_24px">
+                        app:startIconDrawable="@drawable/ic_date_range_24px"
+                        app:startIconTint="@color/gray">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/truck_pickup_datetime_edittext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_medium"
-                            android:hint="Date &amp; Time"
+                            android:hint="@string/date_amp_time"
                             android:imeOptions="actionNext"
                             android:inputType="text"
+                            android:textCursorDrawable="@color/gray"
                             android:textColorHint="@color/gray"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -144,40 +152,40 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_16"
                         >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:minHeight="30dp"
+                            android:minHeight="@dimen/dp_30"
                             android:background="@drawable/shape_rect_rounded_outline_blue"
-                            android:text="Contact person"
+                            android:text="@string/contact_person"
                             android:fontFamily="@font/poppins_regular"
-                            android:paddingStart="8dp"
+                            android:paddingStart="@dimen/dp_8"
                             android:gravity="center"
-                            android:paddingEnd="8dp"
+                            android:paddingEnd="@dimen/dp_8"
                             android:drawableTint="@color/gray"
                             android:textColor="@color/black"
                             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-                            android:drawablePadding="8dp"
+                            android:drawablePadding="@dimen/dp_8"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:minHeight="30dp"
+                            android:minHeight="@dimen/dp_30"
                             android:background="@drawable/shape_rect_rounded_outline_blue"
-                            android:text="Address"
+                            android:text="@string/address"
                             android:fontFamily="@font/poppins_regular"
-                            android:paddingStart="8dp"
+                            android:paddingStart="@dimen/dp_8"
                             android:gravity="center"
-                            android:paddingEnd="8dp"
+                            android:paddingEnd="@dimen/dp_8"
                             android:drawableTint="@color/gray"
                             android:textColor="@color/black"
                             android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
-                            android:drawablePadding="8dp"
-                            android:layout_marginStart="8dp"
+                            android:drawablePadding="@dimen/dp_8"
+                            android:layout_marginStart="@dimen/dp_8"
                             />
                     </LinearLayout>
 
@@ -188,15 +196,15 @@
         </androidx.core.widget.NestedScrollView>
         <TextView
             android:id="@+id/add_new_location_btn"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/shape_rect_outline_blue_fill"
             android:fontFamily="@font/oppins_semi_bold"
             android:gravity="center"
-            android:minHeight="50dp"
-            android:text="Add New Location"
-            android:textColor="#FFF"
+            android:minHeight="@dimen/dp_50"
+            android:text="@string/add_new_location"
+            android:theme="@style/semibold_white_textview_theme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
